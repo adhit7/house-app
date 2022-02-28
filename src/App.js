@@ -1,6 +1,6 @@
-import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Explore from "./pages/Explore";
 import Offers from "./pages/Offers";
 import SignIn from "./pages/SignIn";
@@ -15,19 +15,19 @@ function App() {
   return (
     <>
       <Router>
-          <Routes>
-              <Route path='/' element={<Explore />}/>
-              <Route path='/offers' element={<Offers />}/>
-              <Route path='/category/:categoryName' element={<Category />}/>
-              <Route path='/profile' element={<PrivateRoute />} >
-                  <Route path='/profile' element={<Profile />}/>
-              </Route>
-              <Route path='/sign-in' element={<SignIn />}/>
-              <Route path='/sign-up' element={<SignUp />}/>
-              <Route path='/forgot-password' element={<ForgotPassword />}/>
-          </Routes>
-          <NavBar />
-          <ToastContainer />
+        <Routes>
+          <Route path="/" element={<Explore />} />
+          <Route path="/offers" element={<Offers />} />
+          <Route path="/category/:categoryName" element={<Category />} />
+          <Route path="/profile" element={<PrivateRoute />}>
+            <Route path="/profile" element={<Profile />} />
+          </Route>
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+        </Routes>
+        <NavBar />
+        <ToastContainer />
       </Router>
     </>
   );
