@@ -37,7 +37,6 @@ const SignIn = () => {
             )
 
             if(userCredential.user){
-                console.log(auth.currentUser)
                 navigate('/')
             }
         }catch (e) {

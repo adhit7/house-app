@@ -6,6 +6,7 @@ import { serverTimestamp, doc, setDoc } from 'firebase/firestore';
 import { db } from "../firebase.config";
 import {useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
+import OAuth from "../components/OAuth";
 
 const SignUp = () => {
 
@@ -80,6 +81,8 @@ const SignUp = () => {
                     </div>
 
                 </form>
+
+                <OAuth />
 
                 <Link to='/sign-in' className='registerLink'>Sign In Instead</Link>
             </div>
